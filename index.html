@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="data:,">
-  <title>DIGIFEST 2026 · Comparador de versiones</title>
+  <title>DIGIFEST 2026 · Comparador de propuestas</title>
   <style>
     html, body { margin: 0; height: 100%; background: #fff; }
     #stage { position: fixed; inset: 0; }
@@ -110,6 +110,13 @@
     .tema-toggle[hidden] { display: none; }
     @media (max-width: 720px) { .tema-toggle { bottom: 84px; right: 16px; } }
 
+    /* Con 9 opciones, en pantallas angostas el selector se desplaza en horizontal en vez de salirse de la pantalla. */
+    @media (max-width: 720px) {
+      .proto-picker { max-width: calc(100vw - 16px); overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+      .proto-picker::-webkit-scrollbar { display: none; }
+      .proto-picker-item { flex: none; }
+    }
+
     .proto-picker[data-position="top"] {
       bottom: auto;
       top: 24px;
@@ -127,16 +134,20 @@
     <button class="proto-picker-item">XP</button>
     <button class="proto-picker-item">Pase</button>
     <button class="proto-picker-item">Escenario claro</button>
+    <button class="proto-picker-item">Capítulos</button>
+    <button class="proto-picker-item">Póster</button>
+    <button class="proto-picker-item">Escena</button>
+    <button class="proto-picker-item">Píxel</button>
     <span class="proto-picker-divider" aria-hidden="true"></span>
     <button class="proto-picker-item proto-picker-replay" aria-label="Replay animation (R)">↻</button>
   </nav>
 
   <script>
     // Cada variante es la landing completa en un iframe a pantalla completa.
-    // Ronda 2: V4 "Editorial" descartada (en _descartadas/); V4 ahora es "Pase"; V5 rehecha en claro.
+    // Las 9 propuestas en un solo comparador: 1–5 parten del diseño original corregido; 6–9 son desde cero (rondas 3 y 4).
     // XP admite ?tema=rojo (variante rojo DIGIFEST); el toggle solo existe aquí, en el comparador.
     const temaRojo = () => new URLSearchParams(location.search).get('tema') === 'rojo';
-    const variants = ['v1-pulido', 'v2-collage', 'v3-xp', 'v4-pase', 'v5-escenario-claro']
+    const variants = ['v1-pulido', 'v2-collage', 'v3-xp', 'v4-pase', 'v5-escenario-claro', 'n1-capitulos', 'n2-poster', 'n3-escena', 'n4-pixel']
       // Por HTTP se carga la carpeta con barra final ("v1-pulido/"): `npx serve` redirige "index.html" a "/v1-pulido"
       // sin barra y las rutas relativas (css/, js/, assets/) se resolverían contra la raíz. Con file:// se mantiene index.html.
       .map((dir) => () => `<iframe src="${dir}/${location.protocol === 'file:' ? 'index.html' : ''}${dir === 'v3-xp' && temaRojo() ? '?tema=rojo' : ''}" title="DIGIFEST · ${dir}"></iframe>`);
@@ -158,6 +169,7 @@
 
     function moveHighlight() {
       const el = items[current];
+      el.scrollIntoView?.({ block: 'nearest', inline: 'nearest' });
       highlight.style.width = el.offsetWidth + 'px';
       highlight.style.transform = `translateX(${el.offsetLeft}px)`;
     }
