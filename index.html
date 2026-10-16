@@ -134,9 +134,9 @@
     <button class="proto-picker-item">XP</button>
     <button class="proto-picker-item">Pase</button>
     <button class="proto-picker-item">Escenario claro</button>
-    <button class="proto-picker-item">Capítulos</button>
-    <button class="proto-picker-item">Póster</button>
-    <button class="proto-picker-item">Escena</button>
+    <button class="proto-picker-item">Terminal</button>
+    <button class="proto-picker-item">Retícula</button>
+    <button class="proto-picker-item">Pantalla</button>
     <button class="proto-picker-item">Píxel</button>
     <span class="proto-picker-divider" aria-hidden="true"></span>
     <button class="proto-picker-item proto-picker-replay" aria-label="Replay animation (R)">↻</button>
@@ -144,10 +144,10 @@
 
   <script>
     // Cada variante es la landing completa en un iframe a pantalla completa.
-    // Las 9 propuestas en un solo comparador: 1–5 parten del diseño original corregido; 6–9 son desde cero (rondas 3 y 4).
+    // Las 9 propuestas en un solo comparador: 1–5 parten del diseño original corregido; 6–9 parten del logo: Terminal, Retícula y Pantalla siguen la guía inicial; Píxel nace del logo.
     // XP admite ?tema=rojo (variante rojo DIGIFEST); el toggle solo existe aquí, en el comparador.
     const temaRojo = () => new URLSearchParams(location.search).get('tema') === 'rojo';
-    const variants = ['v1-pulido', 'v2-collage', 'v3-xp', 'v4-pase', 'v5-escenario-claro', 'n1-capitulos', 'n2-poster', 'n3-escena', 'n4-pixel']
+    const variants = ['v1-pulido', 'v2-collage', 'v3-xp', 'v4-pase', 'v5-escenario-claro', 'n5-terminal', 'n6-reticula', 'n7-pantalla', 'n4-pixel']
       // Por HTTP se carga la carpeta con barra final ("v1-pulido/"): `npx serve` redirige "index.html" a "/v1-pulido"
       // sin barra y las rutas relativas (css/, js/, assets/) se resolverían contra la raíz. Con file:// se mantiene index.html.
       .map((dir) => () => `<iframe src="${dir}/${location.protocol === 'file:' ? 'index.html' : ''}${dir === 'v3-xp' && temaRojo() ? '?tema=rojo' : ''}" title="DIGIFEST · ${dir}"></iframe>`);
