@@ -117,14 +117,15 @@
     <button class="proto-picker-item" data-active aria-current="true">Capítulos</button>
     <button class="proto-picker-item">Póster</button>
     <button class="proto-picker-item">Escena</button>
+    <button class="proto-picker-item">Píxel</button>
     <span class="proto-picker-divider" aria-hidden="true"></span>
     <button class="proto-picker-item proto-picker-replay" aria-label="Replay animation (R)">↻</button>
   </nav>
 
   <script>
     // Cada variante es la landing completa en un iframe a pantalla completa.
-    // Ronda 3: tres propuestas nuevas desde cero (contenido heredado, diseño nuevo).
-    const variants = ['n1-capitulos', 'n2-poster', 'n3-escena']
+    // Rondas 3 y 4: cuatro propuestas nuevas desde cero (contenido heredado, diseño nuevo); Píxel nace del logo.
+    const variants = ['n1-capitulos', 'n2-poster', 'n3-escena', 'n4-pixel']
       // Por HTTP se carga la carpeta con barra final ("n1-capitulos/"): `npx serve` redirige "index.html" a la carpeta
       // sin barra y las rutas relativas se resolverían contra la raíz. Con file:// se mantiene index.html.
       .map((dir) => () => `<iframe src="${dir}/${location.protocol === 'file:' ? 'index.html' : ''}" title="DIGIFEST · ${dir}"></iframe>`);

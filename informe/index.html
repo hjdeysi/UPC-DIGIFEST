@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>DIGIFEST 2026 · Propuestas de diseño web</title>
+<meta name="description" content="Informe breve de las nueve propuestas de diseño para el sitio de DIGIFEST 2026.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rojo: #ED111B;        /* solo formas o texto de 24 px o más */
+    --rojo-texto: #D90E18;  /* texto rojo pequeño */
+    --negro: #111111;
+    --plomo: #6E6E6E;       /* solo con texto blanco encima */
+    --gris: #D9D9D9;
+    --blanco: #FFFFFF;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--blanco);
+    color: var(--negro);
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  main { max-width: 1040px; margin: 0 auto; padding: 56px 32px 64px; }
+
+  header { border-top: 8px solid var(--rojo); padding-top: 28px; margin-bottom: 40px; }
+  h1 { margin: 0 0 10px; font-size: 36px; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; }
+  .bajada { margin: 0; max-width: 72ch; font-size: 18px; line-height: 1.45; }
+
+  .bloque { margin-top: 40px; }
+  .bloque-cab { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--negro); }
+  .etiqueta {
+    display: inline-block; background: var(--plomo); color: var(--blanco);
+    font-size: 13px; font-weight: 500; line-height: 1; padding: 6px 8px; letter-spacing: 0.02em;
+  }
+  h2 { margin: 0; font-size: 22px; line-height: 1.2; font-weight: 600; }
+
+  .ficha {
+    display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 28px;
+    padding: 22px 0; border-bottom: 1px solid var(--gris);
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .ficha img {
+    display: block; width: 240px; max-width: 100%; height: auto; aspect-ratio: 1440 / 900;
+    background: var(--gris); border: 1px solid var(--gris);
+  }
+  h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.3; font-weight: 600; }
+  h3 .n { color: var(--rojo-texto); }
+  h3 .eje { font-weight: 400; }
+  .ficha:last-child { border-bottom: 0; }
+  .ficha p { margin: 0 0 6px; max-width: 68ch; }
+  .ficha p:last-child { margin-bottom: 0; }
+
+  .cierre { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--negro); break-inside: avoid; }
+  .cierre h2 { margin-bottom: 8px; }
+  .cierre h2::before {
+    content: ""; display: inline-block; width: 12px; height: 12px; margin-right: 10px;
+    background: var(--rojo); vertical-align: 0.05em;
+  }
+  .cierre p { margin: 0; max-width: 80ch; }
+
+  @media (max-width: 640px) {
+    main { padding: 32px 16px 48px; }
+    header { margin-bottom: 28px; padding-top: 22px; }
+    h1 { font-size: 28px; }
+    .bajada { font-size: 17px; }
+    .ficha { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    h3 { font-size: 18px; }
+  }
+
+  @page { size: A4; margin: 14mm; }
+  @media print {
+    body { font-size: 9pt; line-height: 1.38; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    main { max-width: none; padding: 0; }
+    header { border-top-width: 5px; padding-top: 4mm; margin-bottom: 4mm; }
+    h1 { font-size: 20pt; margin-bottom: 1.5mm; }
+    .bajada { font-size: 10.5pt; max-width: none; }
+    .bloque { margin-top: 5mm; }
+    .bloque-cab { padding-bottom: 2mm; break-after: avoid; page-break-after: avoid; }
+    h2 { font-size: 13pt; }
+    .etiqueta { font-size: 8pt; padding: 1.2mm 1.6mm; }
+    .ficha { grid-template-columns: 52mm minmax(0, 1fr); gap: 6mm; padding: 3.2mm 0; }
+    .ficha img { width: 52mm; }
+    h3 { font-size: 10.5pt; margin-bottom: 1.2mm; }
+    .ficha p { margin-bottom: 1mm; max-width: none; }
+    .cierre { margin-top: 5mm; padding-top: 3mm; }
+    .cierre h2 { margin-bottom: 1.5mm; }
+    .cierre h2::before { width: 3mm; height: 3mm; margin-right: 2.5mm; }
+    .cierre p { max-width: none; }
+  }
+  .descarga { margin: 24px 0 0; font-weight: 500; }
+  .descarga a { color: #111111; text-underline-offset: 4px; }
+  @media print { .descarga { display: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>DIGIFEST 2026 · Propuestas de diseño web</h1>
+    <p class="bajada">Nueve direcciones para el sitio del festival: cinco parten del diseño original corregido y cuatro se construyen desde cero con la paleta rojo, plomo, negro y blanco.</p>
+  </header>
+
+  <section class="bloque" aria-labelledby="bloque-a">
+    <div class="bloque-cab">
+      <span class="etiqueta">Bloque A</span>
+      <h2 id="bloque-a">Sobre el diseño original</h2>
+    </div>
+
+    <article class="ficha">
+      <img src="miniaturas/01-pulido.webp" width="240" height="150" alt="Pulido: portada con la foto de una mujer en blanco, negro y rojo a la izquierda y el título DIGI FEST 2026 en negro y rojo a la derecha.">
+      <div>
+        <h3><span class="n">1.</span> Pulido <span class="eje">(eje: base corregida)</span></h3>
+        <p>Es la composición original con sus errores corregidos: tipografía que carga, texto que nunca pisa el arte, menú móvil sin scroll lateral y un solo CSS.</p>
+        <p>Es la opción más segura para publicar ya y la base del sistema de diseño.</p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <img src="miniaturas/02-collage.webp" width="240" height="150" alt="Collage: fondo de papel crudo, título DIGI FEST en negro y rojo, foto recortada con cinta adhesiva y trazos rojos alrededor.">
+      <div>
+        <h3><span class="n">2.</span> Collage <span class="eje">(eje: personalidad, basada en el afiche inqubaLab)</span></h3>
+        <p>Fondo de papel crudo, bordes rasgados, etiquetas rojas giradas tipo sticker y cinta adhesiva solo donde importa (hero, credenciales, DIGITALKS). Un único acento a mano (plumón) en el registro.</p>
+        <p>Su movimiento propio: las etiquetas "se pegan" al aparecer.</p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <img src="miniaturas/03-xp.webp" width="240" height="150" alt="XP: fondo blanco, título DIGIFEST 2026 en mayúsculas grandes y una foto en blanco y negro sobre una gran X en degradado magenta y naranja.">
+      <div>
+        <h3><span class="n">3.</span> XP <span class="eje">(eje: sistema visual, basada en el afiche Start UPC XP)</span></h3>
+        <p>Mucho blanco, mayúsculas enormes y foto en blanco y negro con una gran "X" de degradado detrás. CTA en píldora negra con flecha en círculo.</p>
+        <p>La X se dibuja al entrar. Usa la paleta magenta-naranja de la submarca, con variante roja activable.</p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <img src="miniaturas/04-pase.webp" width="240" height="150" alt="Pase: la portada es una credencial blanca con franja roja, colgada de un cordón rojo, con la foto a la izquierda y el título a la derecha.">
+      <div>
+        <h3><span class="n">4.</span> Pase <span class="eje">(eje: el objeto del evento; propuesta de la segunda ronda)</span></h3>
+        <p>El hero es una credencial colgada de un cordón que se balancea una vez al cargar.</p>
+        <p>Cada día de la agenda es un ticket con talón perforado. Los speakers son pases tipo tarjeta PVC y el registro es un talón para "arrancar". No lleva QR ni códigos falsos.</p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <img src="miniaturas/05-escenario-claro.webp" width="240" height="150" alt="Escenario claro: fondo blanco, título DIGI FEST 2026, contador de días, horas y minutos en rojo y gris, y la foto a la derecha.">
+      <div>
+        <h3><span class="n">5.</span> Escenario claro <span class="eje">(eje: tema y movimiento, sensación de evento en vivo)</span></h3>
+        <p>Base blanca con una sola sección oscura, DIGITALKS, iluminada como un escenario.</p>
+        <p>Contador hasta la primera actividad (16 NOV, 17:00, hora de Lima) y banda roja con los ejes temáticos en movimiento lento.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="bloque" aria-labelledby="bloque-b">
+    <div class="bloque-cab">
+      <span class="etiqueta">Bloque B</span>
+      <h2 id="bloque-b">Desde cero</h2>
+    </div>
+
+    <article class="ficha">
+      <img src="miniaturas/06-capitulos.webp" width="240" height="150" alt="Capítulos: título DIGIFEST 2026 en negro sobre gris claro y, debajo, cuatro pestañas apiladas en rojo, negro, plomo y blanco con el nombre y las fechas de cada formato.">
+      <div>
+        <h3><span class="n">6.</span> Capítulos <span class="eje">(eje: organizada por formato)</span></h3>
+        <p>Abre con el nombre, una pila de cuatro pestañas de color y la semana de seis días de un vistazo, que lleva a cada capítulo. Siguen cuatro capítulos a pantalla completa: CONECTANDI en rojo, DIGITALKS en negro (el de más peso), International Talks en plomo y Workshops en blanco, cada uno con fechas, actividades, speakers en lista de letra grande y una foto de objetos del evento.</p>
+        <p>Su movimiento propio: al entrar a cada capítulo, la barra superior toma su color. Conviene cuando el público elige por tipo de experiencia.</p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <img src="miniaturas/07-poster.webp" width="240" height="150" alt="Póster: las palabras DIGI y FEST en las esquinas superior izquierda e inferior derecha, las fechas 16 a 21 de noviembre al centro y la lista de días a la izquierda.">
+      <div>
+        <h3><span class="n">7.</span> Póster <span class="eje">(eje: organizada por día)</span></h3>
+        <p>"DIGI" y "FEST" quedan fijos en las esquinas mientras pasan seis paneles, uno por día, cada uno con una vista en blanco y negro de la costa de Lima y sus actividades; el jueves 19 ocupa un campo rojo completo. Después vienen los speakers como pósters de iniciales enormes, el programa con filtro por día y el registro.</p>
+        <p>Su movimiento propio: cada foto se descubre una vez al llegar y la guía lateral marca el día activo. En móvil, el título fijo pasa a ser una barra.</p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <img src="miniaturas/08-escena.webp" width="240" height="150" alt="Escena: a la izquierda, foto en blanco y negro de un auditorio vacío; a la derecha, una columna de texto en blanco; la palabra digifest en letra Bodoni cruza el borde de la foto.">
+      <div>
+        <h3><span class="n">8.</span> Escena <span class="eje">(eje: lectura y decisión)</span></h3>
+        <p>En pantalla ancha, a un lado queda fija una foto de auditorios vacíos y al otro corre una columna de lectura angosta. La agenda es una tabla por horas, los speakers van en lista con su LinkedIn y el registro cierra la página; el nombre "digifest", en letra Bodoni, cruza el borde de la foto.</p>
+        <p>Su movimiento propio: la foto cambia con un fundido al pasar a cada sección. Es la más sobria; conviene cuando lo principal es leer la agenda y decidir.</p>
+      </div>
+    </article>
+
+    <article class="ficha">
+      <img src="miniaturas/09-pixel.webp" width="240" height="150" alt="Píxel: el logo DIGIFEST en negro con sus píxeles rojos sueltos a la izquierda y, a la derecha, las fechas, la sede y el botón Inscríbete.">
+      <div>
+        <h3><span class="n">9.</span> Píxel <span class="eje">(eje: nace del logo)</span></h3>
+        <p>El cuadrado que se desprende del logo es el único motivo: marca las listas, la pestaña activa, el foco del teclado, los bordes escalonados de las fotos y los separadores, y cada día de la agenda es un bloque que se abre. Los speakers llevan monogramas de píxeles con sus iniciales; manda el negro y blanco, con el rojo en los píxeles del logo.</p>
+        <p>Su movimiento propio: al cargar, los diez píxeles sueltos del logo llegan desde la derecha y se asientan una sola vez. Conviene cuando se quiere que el propio logo guíe todo el sitio.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="cierre" aria-labelledby="criterios">
+    <h2 id="criterios">Criterios comunes a todas</h2>
+    <p>Texto legible y con buen contraste. Un solo movimiento propio por versión, que se reduce para quien prefiere menos animación. Ningún dato inventado ni rostros que no correspondan. Fotos, logo y tipografías son provisionales hasta recibir los oficiales.</p>
+  </section>
+  <p class="descarga"><a href="DIGIFEST-informe-diseno.pdf" download>Descargar este informe en PDF</a></p>
+</main>
+</body>
+</html>
